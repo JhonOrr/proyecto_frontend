@@ -1,8 +1,9 @@
 import React from 'react';
-import { AppBar , Typography, Toolbar, Tabs, Tab, useMediaQuery,useTheme} from '@mui/material';
+import { AppBar , Typography, Toolbar, Tabs, Tab, useMediaQuery,useTheme } from '@mui/material';
 import { useState } from 'react';
 import DrawerComp from '../DrawerComp/DrawerComp';
 import { Link } from 'react-router-dom';
+import { Options } from '../Sidebar/Options';
 
 
 const Header = ()=>{

@@ -1,0 +1,25 @@
+@media screen and (max-width: 1065px) {
+    .mapa{
+        width: 550px ;
+    }
+
+}
+
+
+@media screen and (max-width: 950px) {
+    .mapa{
+        width: 400px ;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .mapa{
+        width: 80vw ;
+    }
+    .mapa-box{
+        display: flex;
+        justify-content: center;
+    }
+
+}
