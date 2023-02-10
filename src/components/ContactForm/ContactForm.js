@@ -4,12 +4,10 @@ import React from 'react';
 const ContactForm = () => {
   return (
     <div>
-        <Card style={{maxWidth:500 , margin:'25px auto', padding:'20px 5px '}}>
+        <div style={{maxWidth:500 , margin:'25px auto', padding:'20px 5px '}}>
             <CardContent>
                 <Typography gutterBottom variant='h4'>Contact us</Typography>
                 <form>
-
-              
                 <Grid container spacing={1}>
                     <Grid xs={12} sm={6} item>
                         <TextField label='First Name' placeholder='Enter your first name' variant='outlined' fullWidth required/>
@@ -34,7 +32,7 @@ const ContactForm = () => {
             </CardContent>
 
 
-        </Card>
+        </div>
     </div>
   )
 }

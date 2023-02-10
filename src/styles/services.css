@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.card-title{
+    background: radial-gradient(circle at 80% 80%,#154a7d,#27568A);
+    color: #fff;
+    height: 75px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+.services{
+    padding: 25px 75px;
+    border: 2px solid green;    
+}
+.service-hero{
+    position:relative;
+    height: 300px;
+    overflow: hidden;
+    background: radial-gradient(circle at 47% 50%,#154a7d,#001F4C);
+    opacity: .9;
+    background-size: cover;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+.service-hero .container{
+    text-align: center;
+}
+
+
+
