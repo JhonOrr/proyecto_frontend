@@ -1,6 +1,6 @@
 import React from 'react';
 import { labServices } from './labServices';
-import { Card, CardContent, CardMedia, Typography,Grid} from '@mui/material';
+import { Card, CardContent, CardMedia,Grid} from '@mui/material';
 
 const CardServices = () => {
   return (

@@ -8,6 +8,7 @@ import BusinessIcon from '@mui/icons-material/Business';
 import ScienceIcon from '@mui/icons-material/Science';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import PersonIcon from '@mui/icons-material/Person';
+import { Link } from 'react-router-dom';
 
 
 const DrawerComp = () => {
@@ -17,22 +18,27 @@ const DrawerComp = () => {
     {
       title: 'Home',
       icon: <HomeIcon/>,
+      link: "/"
     },
     {
       title: 'About us',
       icon: <BusinessIcon/>,
+      link: "/about"
     },
     {
       title: 'Services',
       icon: <ScienceIcon/>,
+      link: "/services"
     },
     {
       title: 'Contact us',
       icon: <ContactPhoneIcon/>,
+      link: "/contact"
     },
     {
       title: 'Login',
       icon: <PersonIcon/>,
+      link: "/login"
     }
 
   ]
@@ -48,7 +54,7 @@ const DrawerComp = () => {
         <List className='sidebarList'>
           {options.map((value)=>{
             return(
-              <ListItem sx={{color:'#fff'}} className='row'>
+              <ListItem sx={{color:'#fff'}} className='row' component={Link} to={value.link}>
                 <div className='icon'>{value.icon}</div>
                 <div className='title'> {value.title}</div>
               </ListItem>
