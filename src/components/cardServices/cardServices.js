@@ -1,6 +1,7 @@
 import React from 'react';
 import { labServices } from './labServices';
 import { Card, CardContent, CardMedia,Grid} from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const CardServices = () => {
   return (
@@ -9,7 +10,9 @@ const CardServices = () => {
         {
                 labServices.map((service)=>(
                 <Grid item xs={12} sm={6} md={4} >
-                    <Card sx={{background:'#f1f1f1',boxShadow:'none'}}>
+                    <Link to={`/services/service/${service.title}`}>
+                    
+                    <Card sx={{background:'#f1f1f1',boxShadow:'none',cursor:'pointer'}}>
                         <CardContent sx={{padding:'0'}}>
                             <CardMedia
                                 md={4}
@@ -22,6 +25,7 @@ const CardServices = () => {
                         </div>
                         </CardContent>
                     </Card>
+                    </Link>
                 </Grid>
             ))
         }

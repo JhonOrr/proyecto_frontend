@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+}
+img{
+    display: block;
+}
+.about h3{
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #036bb0
+}
+
+.about p{
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+.historia{
+ 
+}
+.historia .text{
+    line-height: 28px;
+}
+
+@media screen and (min-width: 900px) {
+    .historia{
+        display: flex;
+        align-items: center;
+        justify-content: space-between ;
+    }
+
+}
