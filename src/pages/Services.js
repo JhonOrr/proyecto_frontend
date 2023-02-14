@@ -1,6 +1,5 @@
 import React from 'react';
 import CardServices from '../components/cardServices/cardServices';
-import { Typography } from '@mui/material';
 import '../styles/services.css';
 import ServiceHero from '../components/cardServices/serviceHero';
 

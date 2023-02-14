@@ -18,9 +18,10 @@ const Router =()=>{
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/services" element={<Services/>}/>
                     <Route path="/about" element={<About/>}/>
-                    <Route path="/login" element={<Login/>}/>
+                    
                     <Route path="/services/service/:title" element={<ServiceDetail/>}/>
                 </Route>
+                <Route path="/login" element={<Login/>}/>
                 <Route path='/dashboard' element={<Sidebar/>}/>
             </Routes>   
         </BrowserRouter>

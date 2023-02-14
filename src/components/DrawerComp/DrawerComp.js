@@ -62,33 +62,7 @@ const DrawerComp = () => {
           })}
         </List>
         
-        {/* <List>
-            <ListItem>
-                <ListItemIcon>
-                  <ListItemText sx={{color:'#fff'}}>Home</ListItemText>
-                </ListItemIcon>
-            </ListItem>
-            <ListItem>
-                <ListItemIcon>
-                  <ListItemText sx={{color:'#fff'}}>About us</ListItemText>
-                </ListItemIcon>
-            </ListItem>
-            <ListItem>
-                <ListItemIcon>
-                  <ListItemText>Services</ListItemText>
-                </ListItemIcon>
-            </ListItem>
-            <ListItem>
-                <ListItemIcon>
-                  <ListItemText>Contact us</ListItemText>
-                </ListItemIcon>
-            </ListItem>
-            <ListItem>
-                <ListItemIcon>
-                  <ListItemText>Login</ListItemText>
-                </ListItemIcon>
-            </ListItem>
-        </List> */}
+        
       </Drawer>
       <IconButton 
         sx={{color:'#FFF', marginLeft:'auto'}}

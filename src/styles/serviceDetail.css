@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+}
+img {
+    display: block  ;
+}
+
+.serviceDetail{
+    display: flex;
+    margin-top: 20px;
+    padding: 25px;
+}
+
+.serviceDetailInfo{
+    flex: 50%;
+    /* border: 2px solid black; */
+    color: #036bb0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 20px 20px 0;
+    text-align: justify;
+}
+.serviceDetailInfo >*{
+    margin-bottom: 20px;
+}
+.serviceDetailInfo p{
+    color: #000;
+    line-height: 24px;
+}
+.serviceDetailImage{
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+.serviceDetailImage img{
+    width: 75%;
+}
