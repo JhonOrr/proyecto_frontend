@@ -1,10 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate} from 'react-router-dom';
 import '../../styles/sidebar.css'
 import { Options } from './Options';
+import { UserAuth } from '../../services/auth/AuthContext';
 
 
 const Sidebar = () => {
+
+  const{user,logout}=UserAuth();
+  const navigate = useNavigate();
+  const handleLogout= async ()=>{
+    try{
+      await logout();
+      navigate('/');
+      console.log('you are logged out')
+    }catch(e){
+      console.log(e.message)
+    }
+  }
   return (
     <div className='sidebar'>
       <ul className='sidebarList'>
@@ -21,6 +34,13 @@ const Sidebar = () => {
             
           )
         })}
+        <li className='row'>
+          <div className='title'>{user && user.email}</div>
+        </li>
+        <li className='row'>
+          <button onClick={handleLogout} >Logout</button>
+        </li>
+        
       </ul>
       
       

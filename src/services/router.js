@@ -8,23 +8,28 @@ import About from "../pages/About";
 import Services from "../pages/Services";
 import Layout from "../components/Layout";
 import ServiceDetail from "../components/cardServices/serviceDetail";
+import SignUp from "./auth/SignUp";
+import ProtectedRoute from "./ProtectedRoute";
 
 const Router =()=>{
     return(
+
         <BrowserRouter>
-            <Routes>
-                <Route element={<Layout/>}>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
-                    <Route path="/services" element={<Services/>}/>
-                    <Route path="/about" element={<About/>}/>
-                    
-                    <Route path="/services/service/:title" element={<ServiceDetail/>}/>
-                </Route>
-                <Route path="/login" element={<Login/>}/>
-                <Route path='/dashboard' element={<Sidebar/>}/>
-            </Routes>   
+        
+        <Routes>
+            <Route element={<Layout/>}>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/services" element={<Services/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/services/service/:title" element={<ServiceDetail/>}/>
+            </Route>
+            <Route path="/login" element={<Login/>}/>
+            <Route path='/signup' element={<SignUp/>}/>
+            <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute> }/>
+        </Routes>
         </BrowserRouter>
+        
     )
 }               
 
