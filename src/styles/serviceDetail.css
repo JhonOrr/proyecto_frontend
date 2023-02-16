@@ -5,7 +5,10 @@
 img {
     display: block  ;
 }
-
+.back-button{
+    margin-top: 20px;
+    padding: 25px;
+}
 .serviceDetail{
     display: flex;
     margin-top: 20px;

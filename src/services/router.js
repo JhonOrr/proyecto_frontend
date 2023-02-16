@@ -26,7 +26,9 @@ const Router =()=>{
             </Route>
             <Route path="/login" element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
-            <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute> }/>
+            <Route>
+                <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute>}/>
+            </Route>
         </Routes>
         </BrowserRouter>
         

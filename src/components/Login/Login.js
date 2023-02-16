@@ -38,6 +38,7 @@ const Login = () => {
 
   return (
     <div style={containerStyle}>
+      <form  onSubmit={handleSubmit}>
       <Grid>
       <Paper elevation={10} style={paperStyle}>
         <Grid align='center'>
@@ -72,7 +73,7 @@ const Login = () => {
           variant='contained'
           fullWidth
           style={buttonStyle}
-          onClick={handleSubmit}
+         
         >LOGIN</Button>
         <Button  color='primary' variant='contained' fullWidth style={buttonStyle} onClick={goBack}>BACK</Button>  
         <Typography>
@@ -84,6 +85,7 @@ const Login = () => {
 
       </Paper>
     </Grid>
+    </form>
     </div>
     
   )

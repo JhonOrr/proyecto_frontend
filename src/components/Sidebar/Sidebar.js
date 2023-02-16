@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link,useNavigate} from 'react-router-dom';
 import '../../styles/sidebar.css'
 import { Options } from './Options';
@@ -9,6 +9,7 @@ const Sidebar = () => {
 
   const{user,logout}=UserAuth();
   const navigate = useNavigate();
+
   const handleLogout= async ()=>{
     try{
       await logout();
@@ -18,6 +19,9 @@ const Sidebar = () => {
       console.log(e.message)
     }
   }
+  
+ 
+
   return (
     <div className='sidebar'>
       <ul className='sidebarList'>
@@ -35,7 +39,7 @@ const Sidebar = () => {
           )
         })}
         <li className='row'>
-          <div className='title'>{user && user.email}</div>
+          <div className='title'>{user.email?.split('@')[0]}</div>
         </li>
         <li className='row'>
           <button onClick={handleLogout} >Logout</button>
