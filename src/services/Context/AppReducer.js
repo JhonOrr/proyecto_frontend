@@ -1,0 +1,47 @@
+// export default function AppReducer(state, action){
+//     switch(action.type){
+//         case 'ADD_TASK':
+//             return{
+//                 tasks: [...state.tasks, action.payload]
+//             };
+//         case 'DELETE_TASK':
+//             return{
+//                 tasks : state.tasks.filter(task => task.id !== action.payload)
+//             }
+//         default:
+//             break;
+//     }
+    
+// }
+
+export default function AppReducer(state, action) {
+    switch (action.type) {
+      case "ADD_TASK":
+        return {
+          ...state,
+          tasks: [...state.tasks, action.payload],
+        };
+      case "UPDATE_TASK": {
+        const updatedTask = action.payload;
+  
+        const updatedTasks = state.tasks.map((task) => {
+          if (task.id === updatedTask.id) {
+            updatedTask.done = task.done;
+            return updatedTask;
+          }
+          return task;
+        });
+        return {
+          ...state,
+          tasks: updatedTasks,
+        };
+      }
+      case "DELETE_TASK":
+        return {
+          ...state,
+          tasks: state.tasks.filter((task) => task.id !== action.payload),
+    }
+    default:
+      return state;
+}
+}

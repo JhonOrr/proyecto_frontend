@@ -10,6 +10,8 @@ import Layout from "../components/Layout";
 import ServiceDetail from "../components/cardServices/serviceDetail";
 import SignUp from "./auth/SignUp";
 import ProtectedRoute from "./ProtectedRoute";
+import TaskForm from "../components/TaskForm";
+import TaskList from "../components/TaskList";
 
 const Router =()=>{
     return(
@@ -26,9 +28,12 @@ const Router =()=>{
             </Route>
             <Route path="/login" element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
-            <Route>
+            
                 <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute>}/>
-            </Route>
+                <Route path='/tasklist' element={<TaskList/>}/>
+                <Route path='/taskform' element={<TaskForm/>}/>
+                <Route path='/taskform/:id' element={<TaskForm/>}/>
+  
         </Routes>
         </BrowserRouter>
         
