@@ -10,8 +10,10 @@ import Layout from "../components/Layout";
 import ServiceDetail from "../components/cardServices/serviceDetail";
 import SignUp from "./auth/SignUp";
 import ProtectedRoute from "./ProtectedRoute";
-import TaskForm from "../components/TaskForm";
-import TaskList from "../components/TaskList";
+import EquipForm from "../components/EquipForm";
+import EquipList from "../components/EquipList";
+import ComponentForm from "../components/ComponentForm";
+import ComponentList from "../components/ComponentList";
 
 const Router =()=>{
     return(
@@ -28,12 +30,13 @@ const Router =()=>{
             </Route>
             <Route path="/login" element={<Login/>}/>
             <Route path='/signup' element={<SignUp/>}/>
-            
                 <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute>}/>
-                <Route path='/tasklist' element={<TaskList/>}/>
-                <Route path='/taskform' element={<TaskForm/>}/>
-                <Route path='/taskform/:id' element={<TaskForm/>}/>
-  
+                <Route path='/equiplist' element={<EquipList/>}/>
+                <Route path='/Equipform' element={<EquipForm/>}/>
+                <Route path='/Equipform/:id' element={<EquipForm/>}/>
+                <Route path='/Componentform' element={<ComponentForm/>}/>
+                <Route path='/Componentform/:id' element={<ComponentForm/>}/>
+                <Route path='/Componentlist' element={<ComponentList/>}/>
         </Routes>
         </BrowserRouter>
         
