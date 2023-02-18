@@ -20,9 +20,9 @@ export const Options = [
         link: "/dashboard/componentlist "
     },
     {
-        title:"Mis Solicitudes",
+        title:"Mis Muestras",
         icon: <ScienceIcon/>,
-        link: "/home"
+        link: "samplelist"
     }
 
 ]

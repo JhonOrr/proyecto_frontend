@@ -14,6 +14,8 @@ import EquipList from "../components/EquipList";
 import ComponentForm from "../components/ComponentForm";
 import ComponentList from "../components/ComponentList";
 import Welcome from "../components/Welcome";
+import SampleForm from "../components/SampleForm";
+import SampleList from "../components/SampleList";
 
 const Router = () => {
   return (
@@ -36,7 +38,9 @@ const Router = () => {
           <Route path="Componentform/:id" element={<ComponentForm />} />
           <Route path="Componentlist" element={<ComponentList />} />
           <Route path="welcome" element={<Welcome/>} />
-        
+          <Route path="sampleform" element={<SampleForm/>} />
+          <Route path="sampleList" element={<SampleList/>} />
+
         </Route>
       </Routes>
     </BrowserRouter>

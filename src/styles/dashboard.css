@@ -24,3 +24,7 @@
 div[role="checkbox"]{
  display: none;
 }
+
+.dashboard-main{
+    padding: 20px 45px;
+}

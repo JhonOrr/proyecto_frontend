@@ -77,7 +77,8 @@ const EquipList = () => {
     )
 
     return (
-        <div className='equip-list'>
+        <div className='dashboard-main'>
+             <div className='equip-list'>
             <Grid mb={3}>
                 <Typography mb={3}  variant='h4'>Mis Equipos</Typography>
                 <Button
@@ -94,6 +95,8 @@ const EquipList = () => {
                 <DetailsList columns={columns} items={items}/>
             </Grid>
         </div>
+        </div>
+       
     )
 }
 

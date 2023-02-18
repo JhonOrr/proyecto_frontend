@@ -42,7 +42,7 @@ const EquipForm = () => {
       }, [params.id, equipos]);
 
     return (
-        <div>
+        <div className='dashboard-main'>
         <div style={{maxWidth:500 , margin:'25px auto', padding:'20px 5px '}}>
             <CardContent>
             <Typography gutterBottom variant='h4'>

@@ -6,9 +6,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Typography, Button ,Grid} from '@mui/material';
 
-const ComponentList = () => {
+const SampleList = () => {
     const navigate = useNavigate();
-    const {componentes, deleteComponente} = useContext(GlobalContext);
+    const {muestras} = useContext(GlobalContext);
 
     const columns = [
         {
@@ -20,10 +20,10 @@ const ComponentList = () => {
             isResizable: true,
         },
         {
-            key: "description",
-            name: "Descripción",
-            fieldName: "description",
-            minWidth: 150,
+            key: "componente",
+            name: "Componente",
+            fieldName: "componente",
+            minWidth: 90,
             maxWidth: 150,
             isResizable: true,
         },
@@ -31,11 +31,26 @@ const ComponentList = () => {
             key: "equipo",
             name: "Equipo",
             fieldName: "equipo",
-            minWidth: 150,
+            minWidth: 90,
             maxWidth: 150,
             isResizable: true,
         },
-        
+        {
+            key: "lubricante",
+            name: "Lubricante",
+            fieldName: "lubricante",
+            minWidth: 90,
+            maxWidth: 150,
+            isResizable: true,
+        },
+        {
+            key: "estado",
+            name: "Estado",
+            fieldName: "estado",
+            minWidth: 30,
+            maxWidth: 120   ,
+            isResizable: true,
+        },
         {
             key: "edit",
             name: "Edit",
@@ -48,7 +63,7 @@ const ComponentList = () => {
             key: "delete",
             name: "Delete",
             fieldName: "delete",
-            minWidth: 50,
+            minWidth: 30,
             maxWidth: 50,
             isResizable: true,
         }
@@ -56,13 +71,16 @@ const ComponentList = () => {
     ]
 
     let items = [];
-    componentes.forEach((componente)=>{
+    muestras.forEach((muestra)=>{
         items.push({
-            id: componente.id,
-            description: componente.description,
-            equipo: componente.equipo,
-            edit: <EditIcon onClick={()=>{navigate(`/dashboard/componentform/${componente.id}`)}}/>,
-            delete: <DeleteIcon onClick={()=>deleteComponente(componente.id)}/>
+            id: muestra.id,
+            description: muestra.description,
+            equipo: muestra.equipo,
+            componente : muestra.componente,
+            lubricante : muestra.lubricante,
+            estado: muestra.estado,
+            edit: <EditIcon/>,
+            delete: <DeleteIcon/>
             });
         }
     )
@@ -72,8 +90,8 @@ const ComponentList = () => {
     return (
         <div className='dashboard-main'>
             <Grid  mb={3} >
-                <Typography mb={3}  variant='h4'>Mis Componentes</Typography>
-                <Button variant='contained' onClick={()=>{navigate('/dashboard/componentform')}}>Nuevo Componente</Button>
+                <Typography mb={3}  variant='h4'>Mis Muestras</Typography>
+                <Button variant='contained' onClick={()=>{navigate('/dashboard/sampleform')}}>Nueva Muestra</Button>
             </Grid>
             <Grid  mb={3} >
                 <DetailsList columns={columns} items={items}/>
@@ -83,4 +101,4 @@ const ComponentList = () => {
     )
 }
 
-export default ComponentList;
+export default SampleList;

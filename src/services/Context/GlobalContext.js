@@ -27,6 +27,36 @@ const initialState = {
             description:'componente 2',
             equipo: 'Equipo 2'  
         }
+    ],
+    muestras:[
+        {
+            id: 'M1',
+            componente: 'Componente 1',
+            equipo: 'Equipo 1',
+            lubricante: 'lubricante 1',
+            estado: 'Finalizada'
+        },
+        {
+            id: 'M2',
+            componente: 'Componente 2',
+            equipo: 'Equipo 2',
+            lubricante: 'lubricante 2',
+            estado: 'En Proceso'
+        },
+        {
+            id: 'M3',
+            componente: 'Componente 3',
+            equipo: 'Equipo 3',
+            lubricante: 'lubricante 3',
+            estado: 'Recibida'
+        },
+        {
+            id: 'M4',
+            componente: 'Componente 4',
+            equipo: 'Equipo 4',
+            lubricante: 'lubricante 4',
+            estado: 'Creada'
+        }
     ]
 }
 
