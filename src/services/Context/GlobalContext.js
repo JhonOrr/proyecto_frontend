@@ -5,27 +5,27 @@ const initialState = {
     equipos:[
         {
             id: 'E1',
-            description: 'some description1',
+            description: 'Equipo 1',
             marca: 'marca 1',
-            model: 'model1'        
+            model: 'modelo 1'        
         },
         {
             id: 'E2',
-            description: 'some description2',
+            description: 'Equipo 2',
             marca: 'marca 2',
-            model: 'model2'
+            model: 'modelo 2'
         }
     ],
     componentes:[
         {
             id:'C1',
-            description:'componente1',
-            equipo: 'equipo1'
+            description:'componente 1',
+            equipo: 'Equipo 1'
         },
         {
             id:'C2',
-            description:'componente2',
-            equipo: 'equipo2'
+            description:'componente 2',
+            equipo: 'Equipo 2'  
         }
     ]
 }

@@ -22,8 +22,8 @@ const Login = () => {
       await signIn(email, password)
       navigate('/dashboard/welcome')
     } catch(e){
-      setError(e.message);
-      console.log(e.message);
+      setError('Usuario o contraseña incorrecta');
+      console.log(error);
     }
   };
 
@@ -45,8 +45,9 @@ const Login = () => {
           <Typography variant='h5' sx={{color:'#036bb0'}}>INICIAR SESIÓN</Typography>
         </Grid>
         <TextField
-          label='Username' 
-          placeholder='Enter Username'
+          label='Email' 
+          placeholder='Email'
+          type='email'
           variant='standard'
           style={inputStyle} 
           fullWidth
@@ -79,10 +80,9 @@ const Login = () => {
         <Typography>
           <Link>Forgot password?</Link>
         </Typography>
-     
-
-
-
+        {
+          error
+        }
       </Paper>
     </Grid>
     </form>

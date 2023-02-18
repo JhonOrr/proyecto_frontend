@@ -2,13 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Header from "../components/Header/Header";
 import Contact from "../pages/Contact";
 import Login from "../components/Login/Login";
-import Sidebar from "../components/Sidebar/Sidebar";
+// import Sidebar from "../components/Sidebar/Sidebar";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Services from "../pages/Services";
 import Layout from "../components/Layout";
 import ServiceDetail from "../components/cardServices/serviceDetail";
-import SignUp from "./auth/SignUp";
 import ProtectedRoute from "./ProtectedRoute";
 import EquipForm from "../components/EquipForm";
 import EquipList from "../components/EquipList";
@@ -28,7 +27,6 @@ const Router = () => {
           <Route path="/services/service/:title" element={<ServiceDetail />} />
         </Route>
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
         {/* <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute>}/> */}
         <Route path='/dashboard' element={<ProtectedRoute />}>
           <Route path="equiplist" element={<EquipList />} />
