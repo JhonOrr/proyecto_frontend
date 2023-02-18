@@ -20,7 +20,7 @@ const Login = () => {
     setError('')
     try{
       await signIn(email, password)
-      navigate('/dashboard/equipform')
+      navigate('/dashboard/welcome')
     } catch(e){
       setError(e.message);
       console.log(e.message);

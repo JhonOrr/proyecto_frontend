@@ -14,7 +14,7 @@ const ProtectedRoute = () => {
     return(
         <div style={{display:'flex'}}>
         <Sidebar/>
-        <div className='dashboard-content'  >
+        <div className='dashboard-content'>
             <Outlet />
         </div>
         </div>

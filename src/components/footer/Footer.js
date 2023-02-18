@@ -30,16 +30,8 @@ const Footer = () => {
                 </ul>
             </section>
 
-            <section className='footer-section'>
-                                   
+            <section className='footer-section'>                                   
                 <ul className='footer-social-list'>
-                    {/* <li className='footer-social-row'>
-                        <div className='footer-social-row-icon'>
-                            <Typography variant='body2'>Siguenos</Typography>
-                        </div>
-                        <div className='footer-social-row-icon'>
-                        </div>
-                    </li> */}
                     <li className='footer-social-row'>
                         <div className='footer-social-row-icon'>
                             <FacebookIcon/>

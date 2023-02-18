@@ -5,11 +5,22 @@
 
 .dashboard-content{
     width:80%;
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
     box-sizing: border-box;
+    background: #faf8fa;
 }
 
-    
+.dashboard-welcome{
+    /* border:2px solid black; */
+    height: 100%;
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #a9cbfc;
+    padding: 0
+}
 div[role="checkbox"]{
  display: none;
 }
