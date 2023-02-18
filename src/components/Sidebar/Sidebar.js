@@ -11,15 +11,32 @@ const Sidebar = () => {
   const{user,logout}=UserAuth();
   const navigate = useNavigate();
 
-  const handleLogout= async ()=>{
+  // const handleLogout= async ()=>{
+  //   try{
+  //     await logout();
+  //     navigate('/');
+  //     console.log('you are logged out')
+  //   }catch(e){
+  //     console.log(e.message)
+  //   }
+  // }
+
+  const handleLogout=()=>{
     try{
-      await logout();
+      logout();
       navigate('/');
       console.log('you are logged out')
     }catch(e){
       console.log(e.message)
     }
   }
+
+
+
+
+
+
+
   return (
     <div className='sidebar'>
       <ul className='sidebarList' style={{display:'flex' ,flexDirection:'column', height:'100%', justifyContent:'space-between'}}>
