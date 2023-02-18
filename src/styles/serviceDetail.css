@@ -10,9 +10,17 @@ img {
     padding: 25px;
 }
 .serviceDetail{
-    display: flex;
     margin-top: 20px;
     padding: 25px;
+}
+
+@media screen and (min-width: 900px) {
+    .serviceDetail{
+        display: flex;
+        margin-top: 20px;
+        padding: 25px;
+    }
+
 }
 
 .serviceDetailInfo{
