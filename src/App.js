@@ -13,10 +13,8 @@ function App() {
         <AuthContextProvider>
         <ContextProvider>
           <Router/>
-          </ContextProvider>
+        </ContextProvider>
         </AuthContextProvider>
-     
-
     </div>
   );
 }
