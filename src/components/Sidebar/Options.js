@@ -7,12 +7,17 @@ export const Options = [
     {
         title:"Home",
         icon: <HomeIcon/>,
-        link: "/contact"
+        link: "/dashboard/welcome"
     },
     {
         title:"Mis Equipos",
         icon: <PrecisionManufacturingIcon/>,
-        link: "/login"
+        link: "/dashboard/equiplist "
+    },
+    {
+        title:"Mis Componentes",
+        icon: <PrecisionManufacturingIcon/>,
+        link: "/dashboard/componentlist "
     },
     {
         title:"Mis Solicitudes",

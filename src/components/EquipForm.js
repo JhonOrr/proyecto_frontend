@@ -26,7 +26,7 @@ const EquipForm = () => {
         } else {
             addEquipo(equipo);
         }
-        navigate("/equiplist");
+        navigate("/dashboard/equiplist");
     };
 
     useEffect(() => {
@@ -47,7 +47,7 @@ const EquipForm = () => {
             <CardContent>
             <Typography gutterBottom variant='h4'>
                     {equipo.id ? 'Editar equipo' : 'Crear equipo'}
-                </Typography>
+            </Typography>
             <form onSubmit={handleSubmit}>
                 <Grid container spacing={1}>
                     <Grid xs={12} item>

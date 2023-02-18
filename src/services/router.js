@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Header from "../components/Header/Header";
 import Contact from "../pages/Contact";
 import Login from "../components/Login/Login";
@@ -14,33 +14,35 @@ import EquipForm from "../components/EquipForm";
 import EquipList from "../components/EquipList";
 import ComponentForm from "../components/ComponentForm";
 import ComponentList from "../components/ComponentList";
+import Welcome from "../components/Welcome";
 
-const Router =()=>{
-    return(
-
-        <BrowserRouter>
+const Router = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services/service/:title" element={<ServiceDetail />} />
+        </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        {/* <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute>}/> */}
+        <Route path='/dashboard' element={<ProtectedRoute />}>
+          <Route path="equiplist" element={<EquipList />} />
+          <Route path="Equipform" element={<EquipForm />} />
+          <Route path="Equipform/:id" element={<EquipForm />} />
+          <Route path="Componentform" element={<ComponentForm />} />
+          <Route path="Componentform/:id" element={<ComponentForm />} />
+          <Route path="Componentlist" element={<ComponentList />} />
+          <Route path="welcome" element={<Welcome/>} />
         
-        <Routes>
-            <Route element={<Layout/>}>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/contact" element={<Contact/>}/>
-                <Route path="/services" element={<Services/>}/>
-                <Route path="/about" element={<About/>}/>
-                <Route path="/services/service/:title" element={<ServiceDetail/>}/>
-            </Route>
-            <Route path="/login" element={<Login/>}/>
-            <Route path='/signup' element={<SignUp/>}/>
-                <Route path='/dashboard' element={<ProtectedRoute><Sidebar/></ProtectedRoute>}/>
-                <Route path='/equiplist' element={<EquipList/>}/>
-                <Route path='/Equipform' element={<EquipForm/>}/>
-                <Route path='/Equipform/:id' element={<EquipForm/>}/>
-                <Route path='/Componentform' element={<ComponentForm/>}/>
-                <Route path='/Componentform/:id' element={<ComponentForm/>}/>
-                <Route path='/Componentlist' element={<ComponentList/>}/>
-        </Routes>
-        </BrowserRouter>
-        
-    )
-}               
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default Router;

@@ -1,7 +1,7 @@
 import React, { useState, useContext , useEffect} from 'react';
 import { GlobalContext } from '../services/Context/GlobalContext';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Button, TextField, Grid,Typography, CardContent, MenuItem, FormControl} from '@mui/material';
+import { Button, TextField, Grid,Typography, CardContent, MenuItem} from '@mui/material';
 
 const ComponentForm = () => {
     const[componente, setComponente] = useState({
@@ -25,7 +25,7 @@ const ComponentForm = () => {
         } else {
             addComponente(componente);
         }
-        navigate("/componentlist");
+        navigate("/dashboard/componentlist");
     };
 
     useEffect(() => {
@@ -46,7 +46,7 @@ const ComponentForm = () => {
             <Typography gutterBottom variant='h4'>
                     {componente.id ? 'Editar componente' : 'Crear componente'}
                 </Typography>
-            <FormControl onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <Grid container spacing={1}>
                     <Grid xs={12} item>
                         <TextField
@@ -63,13 +63,14 @@ const ComponentForm = () => {
                     <Grid xs={12} item>
                         
                         <TextField
-                        fullWidth 
-                        variant='outlined' 
-                        onChange={handleChange} 
-                        value={componente.equipo} 
-                        select
-                        required 
-                        label='Seleccione Equipo'
+                            fullWidth 
+                            variant='outlined' 
+                            onChange={handleChange} 
+                            value={componente.equipo} 
+                            select
+                            required 
+                            label='Seleccione Equipo'
+                            name='equipo'
                         >
                             {equipos.map((equipo)=>{
                                 return(
@@ -80,12 +81,12 @@ const ComponentForm = () => {
                     </Grid>
    
                     <Grid xs={12} item>
-                        <Button variant='contained' color='primary' fullWidth type='submit'>
+                        <Button variant='contained' color='primary'  type='submit' fullWidth>
                             {componente.id ? "Editar componente" : "Crear componente"}
                         </Button>
                     </Grid>
                 </Grid>
-            </FormControl>
+            </form>
             </CardContent>
         </div>
         </div>

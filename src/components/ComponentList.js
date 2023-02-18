@@ -4,6 +4,7 @@ import {GlobalContext} from '../services/Context/GlobalContext';
 import { DetailsList } from "@fluentui/react/lib/DetailsList";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import { Typography, Button ,Grid} from '@mui/material';
 
 const ComponentList = () => {
     const navigate = useNavigate();
@@ -60,7 +61,7 @@ const ComponentList = () => {
             id: componente.id,
             description: componente.description,
             equipo: componente.equipo,
-            edit: <EditIcon onClick={()=>{navigate(`/componentform/${componente.id}`)}}/>,
+            edit: <EditIcon onClick={()=>{navigate(`/dashboard/componentform/${componente.id}`)}}/>,
             delete: <DeleteIcon onClick={()=>deleteComponente(componente.id)}/>
             });
         }
@@ -70,8 +71,13 @@ const ComponentList = () => {
 
     return (
         <div>
-            <button onClick={()=>{navigate('/componentform')}}>hola</button>
-            <DetailsList columns={columns} items={items}/>
+            <Grid  mb={3} >
+                <Typography mb={3}  variant='h4'>Mis Componentes</Typography>
+                <Button variant='contained' onClick={()=>{navigate('/dashboard/componentform')}}>Nuevo Componente</Button>
+            </Grid>
+            <Grid  mb={3} >
+                <DetailsList columns={columns} items={items}/>
+            </Grid>
 
         </div>
     )
